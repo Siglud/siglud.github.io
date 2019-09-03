@@ -1,0 +1,28 @@
+title: The Fool
+description: "技术记录&闲言碎语"
+show_downloads: flase
+google_analytics: "UA-15057640-2"
+theme: jekyll-theme-leap-day
+github_username: siglud
+paginate: 20
+paginate_path: "/blog/page:num/"
+timezone: "Asia/Shanghai"
+lang: zh-CN
+author: 'Siglud'
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: 'posts'
+    value:
+      layout: 'post'
+      author: 'Siglud'
+      comments: true
+      share: true
+
+markdown: kramdown
+permalink: /:year-:month-:day/:title.html
+plugins: [jekyll-paginate]
+highlighter: rouge
+comments: true
