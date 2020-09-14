@@ -33,3 +33,14 @@ https://bbs.archlinux.org/viewtopic.php?pid=1925998#p1925998
 * 因为以前是在systemd里面指定用户的，现在改为了通用的systemd文件，那么自然需要有地方指定你要用的用户，这个文件就在/etc/tigervnc/vncserver.users，编辑它，把id和名字指定一下，比如我改成 :1=siglud
 
 全部搞定之后sudo systemctl restart vncserver@:1.service问题解决
+
+另外，在这次升级之后 ~/.vnc/xstartup 这个文件已经过时了，如果需要运行自定义脚本，则必须要安装xorg-xinit
+
+经过我当前的验证是 ~/.xinitrc 和 ~/. 都是读不到的，根据LOG显示，它只会去读这几个文件
+
+```
+Loading profile from /etc/profile
+Loading xinit script /etc/X11/xinit/xinitrc.d/40-libcanberra-gtk-module.sh
+Loading xinit script /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+```
+如果像我这样只是想要改个输入法的而已的花放那里都无所谓了
