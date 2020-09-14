@@ -1,3 +1,16 @@
+---
+layout: post
+title:  "Efficient IO with io_uring"
+date:   2020-09-08 14:43:00 +0800
+author: Siglud
+categories:
+  - Linux
+tags:
+  - Linux
+comment: true
+share: true
+---
+
 本文是 [https://kernel.dk/io_uring.pdf](https://kernel.dk/io_uring.pdf) 的翻译版本
 
 本文旨在介绍最新的Linux  IO接口： io_uring，将其与其他现有的选择做比较。我们将会探究其存在的理由、内部工作原理以及用户可见的界面。本文不会涉及到其具体的命令，更多的时候关注于io_uring的工作原理，目的是希望读者对整个组件是如何工作的有一个深入的了解。本文和io_uring的man页面有一定的内容上的重复，这也是无法避免的。
