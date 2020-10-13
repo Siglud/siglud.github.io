@@ -40,7 +40,9 @@ https://bbs.archlinux.org/viewtopic.php?pid=1925998#p1925998
 
 ```
 Loading profile from /etc/profile
+Loading profile from /home/siglud/.profile
 Loading xinit script /etc/X11/xinit/xinitrc.d/40-libcanberra-gtk-module.sh
 Loading xinit script /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 ```
-如果像我这样只是想要改个输入法的而已的花放那里都无所谓了
+如果像我这样只是想要改个输入法的而已的话放那里都无所谓了
+当然，最好的还是放在自己的主目录的.profile下面了
